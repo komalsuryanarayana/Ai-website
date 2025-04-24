@@ -77,13 +77,13 @@ function App() {
       title: "Specto V",
       description: "A project focused on developing innovative solutions for real-world problems.",
       url: "https://www.linkedin.com/company/specto-v/posts/?feedView=all",
-      image: "https://images.unsplash.com/photo-1517373116369-9bdb8cdc9f62?auto=format&fit=crop&q=80"
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80"
     },
     {
       title: "VIT Projects",
       description: "Various academic projects completed during my time at VIT Chennai.",
       url: "https://vit.ac.in/",
-      image: "https://images.unsplash.com/photo-1517373116369-9bdb8cdc9f61?auto=format&fit=crop&q=80"
+      image: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&q=80"
     }
   ];
 
@@ -111,7 +111,7 @@ function App() {
               className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"
               whileHover={{ scale: 1.05 }}
             >
-              Komal Suryanarayana
+              {isScrolled ? 'Komal Suryanarayana' : 'Welcome!'}
             </motion.a>
 
             {/* Desktop Navigation */}
@@ -167,7 +167,7 @@ function App() {
         </AnimatePresence>
       </motion.nav>
 
-      {/* Hero Section with 3D Scene */}
+      {/* Hero Section with Profile Image */}
       <motion.header 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -183,6 +183,13 @@ function App() {
               transition={{ duration: 0.8 }}
               className="text-left"
             >
+              <div className="mb-8 rounded-full overflow-hidden w-48 h-48 mx-auto lg:mx-0 border-4 border-blue-500/50">
+                <img
+                  src="https://drive.google.com/uc?export=view&id=1C3zLA86HejeRdGNavv2z36IsluFOsM3V"
+                  alt="Komal Suryanarayana"
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <h1 className="text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
                 Komal Suryanarayana
               </h1>
@@ -282,7 +289,7 @@ function App() {
       </section>
 
       {/* Achievements Section */}
-      {/*<section className="py-20 bg-gray-900 relative">
+      <section className="py-20 bg-gray-900 relative">
         <div className="container mx-auto px-4">
           <motion.h2
             initial="hidden"
@@ -308,7 +315,6 @@ function App() {
           </div>
         </div>
       </section>
-            */}
 
       {/* Projects Section */}
       <section id="projects" className="py-20 bg-gray-800 relative">
