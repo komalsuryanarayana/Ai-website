@@ -97,8 +97,8 @@ function App() {
   ];
 
   const achievements = [
-    "Co-Lead In Cultural-IT Culb ",
-    "Event Coordinator And Member in Sahayatha Culb",
+    "Co-Lead In Cultural-IT Culb, VIT-Chennai ",
+    "Event Coordinator And Member in Sahayatha Culb, VIT-Chennai",
     "SalesForce developer",
     "Participant in various hackathons and coding competitions"
   ];
