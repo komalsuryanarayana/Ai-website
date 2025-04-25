@@ -124,7 +124,7 @@ function App() {
             <motion.div
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 2.0 }}
+              transition={{ delay: 0.95 }}
               className="text-gray-400 text-xl"
             >
               Exploring the world of technology and innovation
