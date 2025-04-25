@@ -89,8 +89,8 @@ function App() {
       image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80"
     },
     {
-      title: "VIT Projects",
-      description: "Various academic projects completed during my time at VIT Chennai.",
+      title: "Vellore Insitute Of Technology Research Intern",
+      description: "Contributing in authoring a research paper on Post-Clinical Patient Safety Through Automated Therapeutic Reconciliation Using Large Language Model",
       url: "https://vit.ac.in/",
       image: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&q=80"
     }
@@ -353,7 +353,7 @@ function App() {
             </div>
           </section>
 
-          {/* Projects Section */}
+          {/* internships Section */}
           <section id="projects" className="py-20 bg-gray-800 relative">
             <div className="absolute inset-0 bg-gradient-to-b from-blue-500/5 to-purple-500/5" />
             <div className="container mx-auto px-4 relative">
@@ -363,7 +363,7 @@ function App() {
                 variants={fadeInUp}
                 className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"
               >
-                Projects
+                Internships Experince
               </motion.h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {projects.map((project, index) => (
