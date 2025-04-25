@@ -88,9 +88,9 @@ function App() {
   ];
 
   const achievements = [
-    "Dean's List Award for Academic Excellence",
-    "First Prize in National Level Technical Symposium",
-    "Active member of IEEE Student Branch",
+    "Co-Lead In Cultural-IT Culb ",
+    "Event Coordinator And Member in Sahayatha Culb",
+    "SalesForce developer",
     "Participant in various hackathons and coding competitions"
   ];
 
@@ -185,7 +185,7 @@ function App() {
             >
               <div className="mb-8 rounded-full overflow-hidden w-48 h-48 mx-auto lg:mx-0 border-4 border-blue-500/50">
                 <img
-                  src="https://drive.google.com/file/d/1C3zLA86HejeRdGNavv2z36IsluFOsM3V/view?usp=sharing"
+                  src="https://drive.google.com/thumbnail?id=1C3zLA86HejeRdGNavv2z36IsluFOsM3V&sz=w1000"
                   alt="Komal Suryanarayana"
                   className="w-full h-full object-cover"
                 />
