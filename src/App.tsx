@@ -185,7 +185,7 @@ function App() {
             >
               <div className="mb-8 rounded-full overflow-hidden w-48 h-48 mx-auto lg:mx-0 border-4 border-blue-500/50">
                 <img
-                  src="https://drive.google.com/uc?export=view&id=1C3zLA86HejeRdGNavv2z36IsluFOsM3V"
+                  src="https://drive.google.com/file/d/1C3zLA86HejeRdGNavv2z36IsluFOsM3V/view?usp=sharing"
                   alt="Komal Suryanarayana"
                   className="w-full h-full object-cover"
                 />
