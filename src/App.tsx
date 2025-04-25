@@ -222,7 +222,7 @@ function App() {
                 >
                   <div className="mb-8 rounded-full overflow-hidden w-48 h-48 mx-auto lg:mx-0 border-4 border-blue-500/50">
                     <img
-                      src="https://drive.google.com/thumbnail?id=1C3zLA86HejeRdGNavv2z36IsluFOsM3V&sz=w1000"
+                      src="https://drive.google.com/thumbnail?id=1pOfstP_BQraeVQPAD8ZumfXezaGOeN9E&sz=w1000"
                       alt="Komal Suryanarayana"
                       className="w-full h-full object-cover"
                     />
