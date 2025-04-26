@@ -129,8 +129,18 @@ function App() {
             >
               Exploring the world of technology and innovation
             </motion.div>
+            <motion.button
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.8 }}
+              onClick={() => setShowPortfolio(true)}
+              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+            >
+              Explore
+            </motion.button>
           </div>
         </motion.div>
+        
       ) : (
         <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white pt-16">
           {/* Navigation Bar */}
