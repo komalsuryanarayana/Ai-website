@@ -23,15 +23,12 @@ function App() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+  
+  const handleExplore = () => {
+    setShowPortfolio(true);
+  };
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowPortfolio(true);
-    }, 2000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
+  
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
@@ -133,7 +130,7 @@ function App() {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.8 }}
-              onClick={() => setShowPortfolio(true)}
+              onClick={handleExplore}
               className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
             >
               Explore
