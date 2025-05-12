@@ -253,7 +253,7 @@ function App() {
                       href="#projects"
                       className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-gray-900 transition-colors"
                     >
-                      View Projects
+                      View 
                     </motion.a>
                   </div>
                 </motion.div>
