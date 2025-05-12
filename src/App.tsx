@@ -250,7 +250,7 @@ function App() {
                     <motion.a
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
-                      href="#projects"
+                      href="#education"
                       className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-gray-900 transition-colors"
                     >
                       View 
