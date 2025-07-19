@@ -11,7 +11,7 @@ export function Scene3D() {
           color="#4B0082"
           attach="material"
           distort={0.5}
-          speed={1.5}
+          speed={3}
           roughness={0}
         />
       </Sphere>
