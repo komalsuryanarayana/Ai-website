@@ -142,7 +142,7 @@ function App() {
         <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white pt-16">
           {/* Navigation Bar */}
           <motion.nav
-            initial={{ y: -50 }}
+            initial={{ y: -75 }}
             animate={{ y: 0 }}
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
               isScrolled ? 'bg-gray-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
