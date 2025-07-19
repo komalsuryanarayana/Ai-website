@@ -50,7 +50,6 @@ function App() {
     { name: 'Contact', href: '#contact' },
   ];
 
-  // CHANGE: Added a 'detail' field to each object to hold the specific contact info.
   const socialLinks = [
     { icon: <Github className="w-8 h-8" />, href: 'https://github.com/komalsuryanarayana', label: 'GitHub', detail: 'komalsuryanarayana' },
     { icon: <Linkedin className="w-8 h-8" />, href: 'https://www.linkedin.com/in/komal-suryanarayana-gade-082b0b2a0/', label: 'LinkedIn', detail: 'komal-suryanarayana-gade' },
@@ -62,19 +61,19 @@ function App() {
     {
       school: "Vellore Institute of Technology, Chennai",
       degree: "B.Tech in Computer Science and Engineering",
-      year: "2021-2025",
+      year: "2021 - 2025",
       url: "https://chennai.vit.ac.in/"
     },
     {
       school: "Narayana Junior College",
       degree: "Intermediate Education",
-      year: "2019-2021",
+      year: "2019 - 2021",
       url: "https://www.narayanajuniorcolleges.com/"
     },
     {
       school: "Narayana E-Techno School",
       degree: "Secondary Education",
-      year: "2018-2019",
+      year: "2018 - 2019",
       url: "https://www.narayanaschools.in/bengaluru/electronic-city/sr-secondary"
     }
   ];
@@ -104,18 +103,19 @@ function App() {
   return (
     <AnimatePresence>
       {!showPortfolio ? (
+        // THEME REVERT: Back to dark landing page
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="min-h-screen bg-gradient-to-br from-slate-50 to-gray-200 flex items-center justify-center"
+          className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 flex items-center justify-center"
         >
           <div className="text-center">
             <motion.h1 
               initial={{ scale: 0.5, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.5 }}
-              className="text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-sky-500"
+              className="text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"
             >
               Welcome to Komal's Portfolio
             </motion.h1>
@@ -123,7 +123,7 @@ function App() {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.95 }}
-              className="text-slate-600 text-xl"
+              className="text-gray-400 text-xl"
             >
               Exploring the world of technology and innovation
             </motion.div>
@@ -132,7 +132,7 @@ function App() {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.8 }}
               onClick={handleExplore}
-              className="mt-8 bg-gradient-to-r from-indigo-600 to-sky-500 text-white px-8 py-3 rounded-full font-semibold hover:from-indigo-700 hover:to-sky-600 transition-all duration-300 transform hover:scale-105"
+              className="mt-8 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
             >
               Explore
             </motion.button>
@@ -140,21 +140,22 @@ function App() {
         </motion.div>
         
       ) : (
-        <div className="min-h-screen bg-slate-50 text-slate-800 pt-20">
+        // THEME REVERT: Back to dark portfolio background
+        <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white pt-16">
           {/* Navigation Bar */}
           <motion.nav
             initial={{ y: -100 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.5 }}
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-              isScrolled ? 'bg-white/90 backdrop-blur-md shadow-lg' : 'bg-transparent'
+              isScrolled ? 'bg-gray-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
             }`}
           >
             <div className="container mx-auto px-4">
               <div className="flex items-center justify-between h-20">
                 <motion.a
                   href="#"
-                  className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-sky-500"
+                  className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"
                   whileHover={{ scale: 1.05 }}
                 >
                   {isScrolled ? 'Komal Suryanarayana' : 'Welcome!'}
@@ -166,7 +167,7 @@ function App() {
                     <motion.a
                       key={item.name}
                       href={item.href}
-                      className="text-slate-600 hover:text-indigo-600 transition-colors text-lg"
+                      className="text-gray-300 hover:text-white transition-colors text-lg"
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}
                     >
@@ -178,7 +179,7 @@ function App() {
                 {/* Mobile Menu Button */}
                 <motion.button
                   whileTap={{ scale: 0.95 }}
-                  className="md:hidden text-slate-700 hover:text-indigo-600"
+                  className="md:hidden text-gray-300 hover:text-white"
                   onClick={() => setIsMenuOpen(!isMenuOpen)}
                 >
                   {isMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
@@ -193,14 +194,14 @@ function App() {
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: 'auto' }}
                   exit={{ opacity: 0, height: 0 }}
-                  className="md:hidden bg-white/95 backdrop-blur-md"
+                  className="md:hidden bg-gray-900/95 backdrop-blur-md"
                 >
                   <div className="container mx-auto px-4 py-4">
                     {navItems.map((item) => (
                       <motion.a
                         key={item.name}
                         href={item.href}
-                        className="block py-3 text-slate-600 hover:text-indigo-600 transition-colors text-lg"
+                        className="block py-3 text-gray-300 hover:text-white transition-colors text-lg"
                         whileHover={{ x: 10 }}
                         onClick={() => setIsMenuOpen(false)}
                       >
@@ -218,10 +219,10 @@ function App() {
             id="#"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="min-h-[calc(100vh-5rem)] flex items-center justify-center relative overflow-hidden"
+            className="min-h-[calc(100vh-4rem)] flex items-center justify-center relative overflow-hidden"
           >
             <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1517373116369-9bdb8cdc9f62?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-5" />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-50/50 to-slate-50" />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/50 to-gray-900" />
             <div className="container mx-auto px-4 z-10">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <motion.div
@@ -230,23 +231,23 @@ function App() {
                   transition={{ duration: 0.8 }}
                   className="text-left"
                 >
-                  <div className="mb-8 rounded-full overflow-hidden w-48 h-48 mx-auto lg:mx-0 border-4 border-indigo-500/50">
+                  <div className="mb-8 rounded-full overflow-hidden w-48 h-48 mx-auto lg:mx-0 border-4 border-blue-500/50">
                     <img
                       src="https://drive.google.com/thumbnail?id=1pOfstP_BQraeVQPAD8ZumfXezaGOeN9E&sz=w1000"
                       alt="Komal Suryanarayana"
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h1 className="text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-sky-500">
+                  <h1 className="text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
                     Komal Suryanarayana
                   </h1>
-                  <p className="text-2xl text-slate-600 mb-8">Computer Science Student at VIT Chennai</p>
+                  <p className="text-2xl text-gray-300 mb-8">Computer Science Student at VIT Chennai</p>
                   <div className="flex space-x-4">
                     <motion.a
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
                       href="#contact"
-                      className="bg-indigo-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-indigo-700 transition-colors"
+                      className="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors"
                     >
                       Get in Touch
                     </motion.a>
@@ -254,7 +255,7 @@ function App() {
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
                       href="#education"
-                      className="border-2 border-slate-400 text-slate-700 px-8 py-3 rounded-full font-semibold hover:bg-slate-800 hover:text-white transition-colors"
+                      className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-gray-900 transition-colors"
                     >
                       View 
                     </motion.a>
@@ -273,46 +274,55 @@ function App() {
           </motion.header>
 
           {/* Education Section */}
-          <section id="education" className="py-20 bg-white relative">
+          {/* CHANGE: Redesigned this section to a vertical timeline format */}
+          <section id="education" className="py-20 bg-gray-900 relative">
             <div className="container mx-auto px-4">
               <motion.h2
                 initial="hidden"
                 animate={inView ? "visible" : "hidden"}
                 variants={fadeInUp}
-                className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-sky-500"
+                className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"
               >
                 Education
               </motion.h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {education.map((edu, index) => (
-                  <motion.a
-                    key={index}
-                    href={edu.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    initial="hidden"
-                    animate={inView ? "visible" : "hidden"}
-                    variants={fadeInUp}
-                    transition={{ delay: index * 0.2 }}
-                    className="bg-gradient-to-br from-white to-gray-100/50 backdrop-blur-lg rounded-xl p-6 border border-gray-200/80 hover:border-indigo-400/50 transition-all duration-300 transform hover:-translate-y-1 shadow-sm hover:shadow-xl"
-                  >
-                    <h3 className="text-xl font-semibold mb-2 text-indigo-600">{edu.school}</h3>
-                    <p className="text-slate-700 mb-2">{edu.degree}</p>
-                    <p className="text-slate-500">{edu.year}</p>
-                  </motion.a>
-                ))}
+              <div className="max-w-3xl mx-auto">
+                <div className="relative border-l-2 border-gray-700 ml-4">
+                  {education.map((edu, index) => (
+                    <motion.div
+                      key={index}
+                      initial="hidden"
+                      animate={inView ? "visible" : "hidden"}
+                      variants={fadeInUp}
+                      transition={{ delay: index * 0.2 }}
+                      className="mb-10 ml-8"
+                    >
+                      <span className="absolute flex items-center justify-center w-4 h-4 bg-blue-500 rounded-full -left-[9px] ring-4 ring-gray-900"></span>
+                      <a
+                        href={edu.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xl font-semibold text-blue-400 hover:underline"
+                      >
+                        {edu.school}
+                      </a>
+                      <p className="block mb-2 text-md font-normal leading-none text-gray-400 mt-1">{edu.year}</p>
+                      <p className="text-lg text-gray-300">{edu.degree}</p>
+                    </motion.div>
+                  ))}
+                </div>
               </div>
             </div>
           </section>
 
           {/* Skills Section */}
-          <section id="skills" ref={ref} className="py-20 bg-slate-100 relative overflow-hidden">
+          <section id="skills" ref={ref} className="py-20 bg-gray-800 relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10" />
             <div className="container mx-auto px-4 relative">
               <motion.h2
                 initial="hidden"
                 animate={inView ? "visible" : "hidden"}
                 variants={fadeInUp}
-                className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-sky-500"
+                className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"
               >
                 Technical Skills
               </motion.h2>
@@ -324,10 +334,10 @@ function App() {
                     animate={inView ? "visible" : "hidden"}
                     variants={fadeInUp}
                     transition={{ delay: index * 0.1 }}
-                    className="bg-white/80 backdrop-blur-lg p-6 rounded-xl border border-gray-200/80 hover:border-sky-400/50 transition-all duration-300 transform hover:-translate-y-1 shadow-sm hover:shadow-xl"
+                    className="bg-gradient-to-br from-gray-700/50 to-gray-800/50 backdrop-blur-lg p-6 rounded-xl border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 transform hover:-translate-y-1"
                   >
-                    <div className="flex justify-center mb-4 text-sky-500">{skill.icon}</div>
-                    <h3 className="text-lg font-semibold text-center text-slate-800">{skill.name}</h3>
+                    <div className="flex justify-center mb-4 text-blue-400">{skill.icon}</div>
+                    <h3 className="text-lg font-semibold text-center">{skill.name}</h3>
                   </motion.div>
                 ))}
               </div>
@@ -335,13 +345,13 @@ function App() {
           </section>
 
           {/* Achievements Section */}
-          <section className="py-20 bg-white relative">
+          <section className="py-20 bg-gray-900 relative">
             <div className="container mx-auto px-4">
               <motion.h2
                 initial="hidden"
                 animate={inView ? "visible" : "hidden"}
                 variants={fadeInUp}
-                className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-sky-500"
+                className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"
               >
                 Achievements
               </motion.h2>
@@ -353,9 +363,9 @@ function App() {
                     animate={inView ? "visible" : "hidden"}
                     variants={fadeInUp}
                     transition={{ delay: index * 0.1 }}
-                    className="bg-slate-100/50 backdrop-blur-lg p-6 rounded-xl border border-slate-200"
+                    className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-lg p-6 rounded-xl border border-gray-700/50"
                   >
-                    <p className="text-slate-700">{achievement}</p>
+                    <p className="text-gray-300">{achievement}</p>
                   </motion.div>
                 ))}
               </div>
@@ -363,13 +373,14 @@ function App() {
           </section>
 
           {/* Internships Section */}
-          <section id="projects" className="py-20 bg-slate-100 relative">
+          <section id="projects" className="py-20 bg-gray-800 relative">
+            <div className="absolute inset-0 bg-gradient-to-b from-blue-500/5 to-purple-500/5" />
             <div className="container mx-auto px-4 relative">
               <motion.h2
                 initial="hidden"
                 animate={inView ? "visible" : "hidden"}
                 variants={fadeInUp}
-                className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-sky-500"
+                className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"
               >
                 Internships Experience
               </motion.h2>
@@ -384,7 +395,7 @@ function App() {
                     animate={inView ? "visible" : "hidden"}
                     variants={fadeInUp}
                     transition={{ delay: index * 0.2 }}
-                    className="bg-white/80 backdrop-blur-lg rounded-xl overflow-hidden border border-gray-200/80 hover:border-indigo-400/50 transition-all duration-300 shadow-sm hover:shadow-2xl"
+                    className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-lg rounded-xl overflow-hidden border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300"
                   >
                     <div className="relative">
                       <img
@@ -392,14 +403,15 @@ function App() {
                         alt={project.title}
                         className="w-full h-48 object-cover"
                       />
+                      <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60" />
                     </div>
                     <div className="p-6">
-                      <h3 className="text-xl font-semibold mb-2 text-indigo-600">{project.title}</h3>
-                      <p className="text-slate-600 mb-4">{project.description}</p>
+                      <h3 className="text-xl font-semibold mb-2 text-blue-400">{project.title}</h3>
+                      <p className="text-gray-400 mb-4">{project.description}</p>
                       <motion.div
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="inline-block bg-gradient-to-r from-indigo-600 to-sky-500 text-white px-4 py-2 rounded-md hover:from-indigo-700 hover:to-sky-600 transition-all duration-300"
+                        className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-md hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
                       >
                         Learn More
                       </motion.div>
@@ -411,13 +423,14 @@ function App() {
           </section>
 
           {/* Contact Section */}
-          <section id="contact" className="py-20 bg-white relative">
+          <section id="contact" className="py-20 bg-gray-900 relative">
+            <div className="absolute inset-0 bg-gradient-to-t from-blue-500/5 to-purple-500/5" />
             <div className="container mx-auto px-4 relative">
               <motion.h2
                 initial="hidden"
                 animate={inView ? "visible" : "hidden"}
                 variants={fadeInUp}
-                className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-sky-500"
+                className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"
               >
                 Get in Touch
               </motion.h2>
@@ -425,7 +438,7 @@ function App() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-6xl mx-auto">
                 {/* Contact Info */}
                 <div className="space-y-8">
-                  <h3 className="text-3xl font-semibold text-indigo-600 mb-8">Contact Information</h3>
+                  <h3 className="text-3xl font-semibold text-blue-400 mb-8">Contact Information</h3>
                   <div className="grid grid-cols-1 gap-6">
                     {socialLinks.map((social, index) => (
                       <motion.a
@@ -441,13 +454,12 @@ function App() {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                       >
-                        <div className="text-sky-500 group-hover:text-indigo-500 transition-colors p-2 bg-slate-100 rounded-full">
+                        <div className="text-blue-400 group-hover:text-blue-300 transition-colors p-2 bg-gray-800 rounded-full">
                           {React.cloneElement(social.icon, { className: "w-6 h-6" })}
                         </div>
-                        {/* CHANGE: Updated this block to show both the label and the detail. */}
                         <div>
-                          <p className="text-slate-800 group-hover:text-indigo-600 transition-colors text-lg font-semibold">{social.label}</p>
-                          <p className="text-slate-500 group-hover:text-slate-700 transition-colors">{social.detail}</p>
+                          <p className="text-white group-hover:text-blue-400 transition-colors text-lg font-semibold">{social.label}</p>
+                          <p className="text-gray-400 group-hover:text-gray-300 transition-colors">{social.detail}</p>
                         </div>
                       </motion.a>
                     ))}
@@ -456,7 +468,7 @@ function App() {
 
                 {/* Contact Form */}
                 <div>
-                  <h3 className="text-3xl font-semibold text-indigo-600 mb-8">Send a Message</h3>
+                  <h3 className="text-3xl font-semibold text-blue-400 mb-8">Send a Message</h3>
                   <ContactForm />
                 </div>
               </div>
