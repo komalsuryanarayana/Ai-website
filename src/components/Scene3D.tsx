@@ -8,7 +8,7 @@ export function Scene3D() {
       <directionalLight position={[2, 5, 2]} intensity={1} />
       <Sphere args={[1, 100, 200]} scale={2}>
         <MeshDistortMaterial
-          color="#4B0082"
+          color="#d5b4ed"
           attach="material"
           distort={0.5}
           speed={3}
