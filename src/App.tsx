@@ -293,7 +293,7 @@ function App() {
                       initial="hidden"
                       animate={inView ? "visible" : "hidden"}
                       variants={fadeInUp}
-                      transition={{ delay: index * 0.1 }}
+                      transition={{ delay: index * 0.5 }}
                       className="mb-10 ml-8"
                     >
                       <span className="absolute flex items-center justify-center w-4 h-4 bg-blue-500 rounded-full -left-[9px] ring-4 ring-gray-900"></span>
