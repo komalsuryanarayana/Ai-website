@@ -241,7 +241,7 @@ function App() {
                   <h1 className="text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
                     Komal Suryanarayana
                   </h1>
-                  <p className="text-2xl text-gray-300 mb-8">Computer Science Student at VIT Chennai</p>
+                  <p className="text-2xl text-gray-300 mb-8">Full Stack Developer</p>
                   <div className="flex space-x-4">
                     <motion.a
                       whileHover={{ scale: 1.1 }}
