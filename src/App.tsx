@@ -251,8 +251,8 @@ function App() {
                       Get in Touch
                     </motion.a>
                     <motion.a
-                      whileHover={{ scale: 0.8 }}
-                      whileTap={{ scale: 0.5 }}
+                      whileHover={{ scale: 0.5 }}
+                      whileTap={{ scale: 0.1 }}
                       href="#education"
                       className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-gray-900 transition-colors"
                     >
