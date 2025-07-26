@@ -17,7 +17,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 40);
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -140,7 +140,6 @@ function App() {
         </motion.div>
         
       ) : (
-        // THEME REVERT: Back to dark portfolio background
         <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white pt-16">
           {/* Navigation Bar */}
           <motion.nav
@@ -252,8 +251,8 @@ function App() {
                       Get in Touch
                     </motion.a>
                     <motion.a
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
+                      whileHover={{ scale: 1.0 }}
+                      whileTap={{ scale: 0.8 }}
                       href="#education"
                       className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-gray-900 transition-colors"
                     >
